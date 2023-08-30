@@ -1,11 +1,13 @@
-import { useRef } from "react";
+import { useRef, useContext } from "react";
 
 import Button from "../UI/Button/Button";
 import Card from "../UI/Card/Card";
+import CartContext from "../../context/cart-context";
 
 import classes from "./FoodItem.module.css";
 
 const FoodItem = (props) => {
+  const cartContext = useContext(CartContext);
   const amountRef = useRef();
 
   const amountIncrease = () => {
@@ -27,6 +29,7 @@ const FoodItem = (props) => {
       price: price,
       amount: +amount,
     };
+    cartContext.addItem(productToAdd);
   };
 
   return (
