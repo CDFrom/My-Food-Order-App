@@ -5,7 +5,7 @@ import classes from "./OrderSection.module.css";
 const OrderSection = (props) => {
   const products = props.productSection.products;
   const itemList = products.map((product) => {
-    return <FoodItem product={product} />;
+    return <FoodItem key={product.name} product={product} />;
   });
 
   return (
