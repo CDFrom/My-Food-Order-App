@@ -26,7 +26,7 @@ const FoodItem = (props) => {
     const amount = amountRef.current.value;
     const productToAdd = {
       name: name,
-      price: price,
+      price: +price,
       amount: +amount,
     };
     cartContext.addItem(productToAdd);
