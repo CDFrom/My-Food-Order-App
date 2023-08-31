@@ -1,0 +1,23 @@
+.cart {
+  width: 90%;
+  margin: auto;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: solid black 2px;
+}
+
+.order-item span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.cart__bottom {
+  display: flex;
+  justify-content: space-between;
+}
