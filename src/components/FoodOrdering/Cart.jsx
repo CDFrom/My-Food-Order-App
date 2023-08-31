@@ -15,11 +15,11 @@ const Cart = (props) => {
 
   const orderList = cartContext.items.map((item) => {
     return (
-      <div className={classes["order-item"]}>
+      <div key={item.name} className={classes["order-item"]}>
         <div>
-          <span>{item.name}</span> x{item.amount}
+          {item.amount}x <span>{item.name}</span>
         </div>
-        <div>${item.price}</div>
+        <div>${(item.price * item.amount).toFixed(2)}</div>
       </div>
     );
   });
@@ -31,7 +31,7 @@ const Cart = (props) => {
       </div>
       <div className={classes["order-list"]}>{orderList}</div>
       <div className={classes["cart__bottom"]}>
-        <div>Total Price: {cartContext.totalPrice.toFixed(2)}</div>
+        <div>Total Price: ${cartContext.totalPrice.toFixed(2)}</div>
         <Button onClick={orderHandler}>Order</Button>
       </div>
     </Card>
