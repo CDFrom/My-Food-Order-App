@@ -1,6 +1,7 @@
 .cart {
   position: relative;
   width: 90%;
+  max-width: 40rem;
   margin: auto;
   padding-top: 2rem;
 }
