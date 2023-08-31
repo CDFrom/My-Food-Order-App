@@ -23,6 +23,11 @@
   padding: 0.5rem;
 }
 
+.cart:hover,
+.cart:active {
+  cursor: pointer;
+}
+
 .cart span {
   display: flex;
   justify-content: center;

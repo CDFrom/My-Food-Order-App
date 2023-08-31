@@ -11,6 +11,11 @@
   right: 1rem;
 }
 
+.exit:hover,
+.exit:active {
+  cursor: pointer;
+}
+
 .order-list {
   max-height: 30rem;
 }
