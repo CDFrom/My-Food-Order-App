@@ -24,7 +24,7 @@ const Header = (props) => {
     <>
       {cartIsOpen && (
         <Modal onClose={closeCart}>
-          <Cart />
+          <Cart onClick={closeCart} />
         </Modal>
       )}
       <div className={classes.header}>

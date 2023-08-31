@@ -1,6 +1,18 @@
 .cart {
+  position: relative;
   width: 90%;
   margin: auto;
+  padding-top: 2rem;
+}
+
+.exit {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+}
+
+.order-list {
+  max-height: 30rem;
 }
 
 .order-item {
@@ -20,4 +32,5 @@
 .cart__bottom {
   display: flex;
   justify-content: space-between;
+  margin-top: 1rem;
 }

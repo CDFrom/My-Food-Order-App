@@ -10,6 +10,7 @@
 
 .modal {
   position: fixed;
+  top: 5rem;
   width: 100%;
   z-index: 20;
 }
