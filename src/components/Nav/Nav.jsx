@@ -8,7 +8,10 @@ const Nav = (props) => {
       <div
         key={section.title}
         className={classes["section-title"]}
-        onClick={() => props.onClick(section.title)}
+        onClick={() => {
+          if (props.onPlayAnimation) props.onPlayAnimation();
+          props.onClick(section.title);
+        }}
       >
         {section.title}
       </div>
