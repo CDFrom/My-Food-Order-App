@@ -3,3 +3,17 @@
   width: 90%;
   max-width: 50rem;
 }
+
+@media (min-width: 768px) {
+  .main-content {
+    margin: 8rem 2rem 4rem 16rem;
+    width: auto;
+  }
+}
+
+@media (min-width: 1350px) {
+  .main-content {
+    margin: 8rem auto 4rem auto;
+    width: 90%;
+  }
+}
