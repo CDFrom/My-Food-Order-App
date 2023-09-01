@@ -1,0 +1,38 @@
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 3.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 66%;
+  background: white;
+  z-index: 20;
+  border-radius: 0;
+  animation-fill-mode: forwards;
+  animation: open-nav 300ms ease-in-out;
+}
+
+.animation-reverse {
+  animation: close-nav 300ms ease-in-out;
+}
+
+@keyframes open-nav {
+  from {
+    left: -15rem;
+  }
+  to {
+    left: 0rem;
+  }
+}
+
+@keyframes close-nav {
+  from {
+    left: 0rem;
+  }
+  to {
+    left: -15rem;
+  }
+}
