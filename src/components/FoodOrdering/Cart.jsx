@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 import Button from "../UI/Button/Button";
 import Card from "../UI/Card/Card";
@@ -8,9 +8,21 @@ import classes from "./Cart.module.css";
 
 const Cart = (props) => {
   const cartContext = useContext(CartContext);
+  const [isOrderComplete, setIsOrderComplete] = useState(false);
+  const [isOrderProcessing, setIsOrderProcessing] = useState(false);
+
+  const processOrder = () => {
+    setIsOrderProcessing(true);
+    setTimeout(() => {
+      setIsOrderComplete(true);
+      cartContext.completeOrder();
+    }, 2000);
+  };
 
   const orderHandler = () => {
-    cartContext.completeOrder();
+    if (cartContext.items.length > 0) {
+      processOrder();
+    }
   };
 
   const amountIncrease = (item) => {
@@ -20,6 +32,29 @@ const Cart = (props) => {
 
   const amountDecrease = (item) => {
     cartContext.removeItem(item);
+  };
+
+  const Progress = () => {
+    return (
+      <Card className={classes.progress}>
+        {!isOrderComplete && <div className={classes.blocker}></div>}
+        {!isOrderComplete && <>Processing</>}
+        {isOrderComplete && (
+          <>
+            Your order is complete!
+            <br />
+            Your food will be there soon!
+            <br />
+            <Button
+              className={classes["order-complete__button"]}
+              onClick={props.onClick}
+            >
+              Complete
+            </Button>
+          </>
+        )}
+      </Card>
+    );
   };
 
   const orderList = cartContext.items.map((item) => {
@@ -55,6 +90,7 @@ const Cart = (props) => {
 
   return (
     <Card id='cart' className={classes.cart}>
+      {isOrderProcessing && <Progress />}
       <Button className={classes.exit} onClick={props.onClick}>
         X
       </Button>

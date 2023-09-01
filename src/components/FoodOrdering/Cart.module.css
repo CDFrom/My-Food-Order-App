@@ -1,3 +1,12 @@
+.blocker {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+}
+
 .cart {
   position: relative;
   width: 90%;
@@ -5,6 +14,24 @@
   margin: auto;
   padding-top: 2rem;
   animation: open-cart 300ms ease-in-out;
+}
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  height: 10rem;
+  width: 80%;
+  top: 2rem;
+  left: 10%;
+  text-align: center;
+}
+
+.order-complete__button {
+  padding: 0.5rem 0;
+  width: 40%;
 }
 
 .exit {
