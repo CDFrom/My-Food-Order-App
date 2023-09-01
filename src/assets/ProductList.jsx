@@ -92,7 +92,7 @@ const ProductList = [
     products: [
       {
         name: "2 Piece",
-        description: "2 pieces of hand-breaded chicken (1 light, 1 dark)",
+        description: "2 pieces of hand-breaded chicken (1 light, 1 dark).",
         price: 2.0,
       },
       {
@@ -127,7 +127,7 @@ const ProductList = [
     products: [
       {
         name: "Fries",
-        description: "Freshly made, hot, thick-cut french fries",
+        description: "Freshly made, hot, thick-cut french fries.",
         price: 1.0,
       },
       {
@@ -170,12 +170,12 @@ const ProductList = [
       },
       {
         name: "Iced Tea",
-        description: "Fresh Iced Tea (No refills)",
+        description: "Fresh Iced Tea (No refills).",
         price: 1.5,
       },
       {
         name: "Lemonade",
-        description: "Fresh Lemonade (No refills)",
+        description: "Fresh Lemonade (No refills).",
         price: 1.5,
       },
       {
@@ -198,15 +198,15 @@ const ProductList = [
         description: "Blue raspberry flavoured slushy.",
         price: 2.0,
       },
-      { name: "Vanilla Shake", description: "Vanilla milkshake", price: 3.0 },
+      { name: "Vanilla Shake", description: "Vanilla milkshake.", price: 3.0 },
       {
         name: "Chocolate Shake",
-        description: "Chocolate milkshake",
+        description: "Chocolate milkshake.",
         price: 3.0,
       },
       {
         name: "Strawberry Shake",
-        description: "Strawberry milkshake",
+        description: "Strawberry milkshake.",
         price: 3.0,
       },
     ],
