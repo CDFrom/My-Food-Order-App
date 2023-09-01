@@ -13,7 +13,32 @@
   z-index: 1;
 }
 
-.header > span {
+.header > div {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+}
+
+.hamburger:hover,
+.hamburger:active {
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 100%;
+  border-bottom: solid 4px black;
+}
+
+.page-title {
   display: flex;
   font-size: 1.25rem;
   font-weight: bold;
@@ -59,7 +84,11 @@
 }
 
 @media (min-width: 768px) {
-  .header > span {
+  .hamburger {
+    display: none;
+  }
+
+  .page-title {
     font-size: 1.5rem;
     width: 100%;
   }

@@ -54,7 +54,7 @@ const Cart = (props) => {
   });
 
   return (
-    <Card className={classes.cart}>
+    <Card id='cart' className={classes.cart}>
       <Button className={classes.exit} onClick={props.onClick}>
         X
       </Button>
