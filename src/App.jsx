@@ -22,11 +22,11 @@ const App = () => {
   };
 
   const closeNavHandler = (link) => {
+    if (link) {
+      scrollToLink(link);
+    }
     setTimeout(() => {
       setNavIsOpen(false);
-      if (link) {
-        scrollToLink(link);
-      }
     }, 300);
   };
 
