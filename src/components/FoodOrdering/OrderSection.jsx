@@ -10,7 +10,7 @@ const OrderSection = (props) => {
 
   return (
     <div className={classes.section}>
-      <h1>{props.productSection.title}</h1>
+      <h1 id={props.productSection.title}>{props.productSection.title}</h1>
       {itemList}
     </div>
   );
